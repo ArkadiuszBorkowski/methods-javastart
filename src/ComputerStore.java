@@ -1,14 +1,15 @@
 class ComputerStore {
     public static void main(String[] args) {
-        Computer comp1 = new Computer();
-        comp1.processor = "i5";
-        comp1.memory = 8196;
 
-        ComputerUpgrade upgrade = new ComputerUpgrade();
-        upgrade.addMemory(comp1, 8196);
+    ComputerFactory factory = new ComputerFactory();
+        Computer comp1 = factory.create("i5", 8196);
+        Computer comp2 = factory.create("AMD 5120", 16396);
 
-        comp1.printInfo();
+    ComputerUpgrade upgrade = new ComputerUpgrade();
+    upgrade.addMemory(comp1, 4098);
+
         System.out.println(comp1.getInfo());
+        System.out.println(comp2.getInfo());
 
     }
 }
