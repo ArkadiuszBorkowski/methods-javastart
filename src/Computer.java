@@ -5,4 +5,8 @@ class Computer {
     void printInfo() {
         System.out.println(processor + " " + memory);
     }
+
+    String getInfo(){
+        return  processor + " " + memory;
+    }
 }

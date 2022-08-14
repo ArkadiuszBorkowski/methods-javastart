@@ -4,11 +4,11 @@ class ComputerStore {
         comp1.processor = "i5";
         comp1.memory = 8196;
 
-        Computer comp2 = new Computer();
-        comp2.processor = "AMD 5210";
-        comp2.memory = 16392;
+        ComputerUpgrade upgrade = new ComputerUpgrade();
+        upgrade.addMemory(comp1, 8196);
 
         comp1.printInfo();
-        comp2.printInfo();
+        System.out.println(comp1.getInfo());
+
     }
 }
